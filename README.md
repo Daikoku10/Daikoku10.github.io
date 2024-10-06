@@ -1,0 +1,1 @@
+# Daikoku10.github.io

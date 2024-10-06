@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../BBH-SWISS/voting-stimmunterlagen-offline-client-app-main/voting-stimmunterlagen-offline-client-app-main/backend"
+		},
+		{
+			"path": "../BBH-SWISS/voting-stimmunterlagen-offline-client-app-main/voting-stimmunterlagen-offline-client-app-main/frontend"
+		},
+		{
+			"path": "../BBH-SWISS/voting-stimmunterlagen-offline-client-app-main/voting-stimmunterlagen-offline-client-app-main/scripts"
+		}
+	]
+}

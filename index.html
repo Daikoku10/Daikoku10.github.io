@@ -1,644 +1,1414 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T7VCRLFV07"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7VCRLFV07">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-T7VCRLFV07');
-</script>	  
-    <title>Sushant Jadhav Portfolio</title>
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7VCRLFV07');
+    </script>
+    <title>Sushant Jadhav | Red Team & Offensive Security</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="/assets/docs/my.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
+    <!-- ===== EXTERNAL STYLES ===== -->
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/ionicons.min.css">
-    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        /* ============================================================
+               RED TEAM / HACKER THEME — MAXIMUM IMPACT
+               ============================================================ */
 
+        /* ----- Global ----- */
+        body {
+            background: #0a0a0f;
+            color: #c0c0c0;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            cursor: default;
+        }
 
-<style>
+        /* ----- Accent colors ----- */
+        :root {
+            --accent: #ff0040;
+            --accent-glow: #ff0040;
+            --accent-dark: #cc0033;
+            --bg-card: #12121f;
+            --bg-dark: #0a0a0f;
+            --text-light: #f0f0f0;
+            --text-muted: #8899aa;
+        }
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+        /* ----- Glowing text & accents ----- */
+        .glow-text {
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 40px var(--accent);
+        }
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+        .glow-border {
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 15px rgba(255, 0, 64, 0.3);
+        }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+        /* ----- Navigation ----- */
+        .ftco_navbar {
+            background: rgba(10, 10, 15, 0.95) !important;
+            border-bottom: 2px solid var(--accent);
+            box-shadow: 0 0 20px rgba(255, 0, 64, 0.2);
+        }
+        .ftco_navbar .navbar-brand {
+            color: var(--accent) !important;
+            font-weight: 700;
+            text-shadow: 0 0 10px var(--accent);
+        }
+        .ftco_navbar .nav-link {
+            color: var(--text-muted) !important;
+            transition: 0.3s;
+        }
+        .ftco_navbar .nav-link:hover {
+            color: var(--accent) !important;
+            text-shadow: 0 0 10px var(--accent);
+        }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+        /* ----- Hero Section ----- */
+        .hero {
+            background: var(--bg-dark);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero .slider-item {
+            background: transparent;
+        }
+        .hero .text h1 {
+            color: var(--text-light);
+            font-weight: 700;
+        }
+        .hero .text h1 span {
+            color: var(--accent);
+            text-shadow: 0 0 20px var(--accent);
+        }
+        .hero .subheading {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 300;
+        }
+        .btn-primary {
+            background: var(--accent);
+            border: none;
+            color: #0a0a0f !important;
+            font-weight: 600;
+            box-shadow: 0 0 20px rgba(255, 0, 64, 0.4);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            box-shadow: 0 0 40px rgba(255, 0, 64, 0.7);
+            transform: scale(1.05);
+            color: #fff !important;
+        }
+        .btn-outline-white {
+            border: 2px solid var(--accent);
+            color: var(--accent) !important;
+            background: transparent;
+            box-shadow: 0 0 10px rgba(255, 0, 64, 0.2);
+        }
+        .btn-outline-white:hover {
+            background: var(--accent);
+            color: #0a0a0f !important;
+            box-shadow: 0 0 30px rgba(255, 0, 64, 0.6);
+        }
 
+        /* ----- Typing animation ----- */
+        #typing-animation {
+            color: var(--accent);
+            text-shadow: 0 0 15px var(--accent);
+            font-weight: 700;
+        }
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
+        /* ----- About Section ----- */
+        .about-mf .box-shadow-full {
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 30px rgba(255, 0, 64, 0.1);
+            border-radius: 10px;
+        }
+        .about-mf .title-s {
+            color: var(--accent);
+        }
+        .about-mf .about-info p {
+            color: var(--text-light);
+        }
+        .about-mf .skill-mf .progress {
+            background: #1a1a2e;
+            border-radius: 0;
+        }
+        .about-mf .skill-mf .progress-bar {
+            background: var(--accent);
+            box-shadow: 0 0 10px var(--accent);
+        }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
+        /* ----- Resume Section ----- */
+        .resume-wrap {
+            background: var(--bg-card) !important;
+            border-left: 3px solid var(--accent);
+            box-shadow: 0 0 20px rgba(255, 0, 64, 0.1);
+            transition: 0.3s;
+        }
+        .resume-wrap:hover {
+            box-shadow: 0 0 40px rgba(255, 0, 64, 0.2);
+            transform: translateY(-5px);
+        }
+        .resume-wrap .date {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        .resume-wrap h2 {
+            color: var(--text-light);
+        }
+        .resume-wrap ul li {
+            color: var(--text-muted);
+        }
+        .resume-wrap .exp-highlight {
+            border-left-color: var(--accent);
+            background: rgba(255, 0, 64, 0.08);
+        }
+        .resume-wrap .exp-highlight strong {
+            color: var(--accent);
+        }
 
+        /* ----- Badges & Certifications ----- */
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .badge-item {
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 15px 20px;
+            min-width: 180px;
+            transition: 0.3s;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 0, 64, 0.1);
+        }
+        .badge-item:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 0 30px rgba(255, 0, 64, 0.3);
+            border-color: #ff66aa;
+        }
+        .badge-item .badge-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .badge-item .badge-name {
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .badge-item .badge-issuer {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+        .badge-item .badge-level {
+            color: var(--accent);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 6px;
+        }
 
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
+        /* Certification badge images - clickable */
+        .cert-img-link {
+            display: inline-block;
+            transition: 0.3s;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            margin: 8px;
+        }
+        .cert-img-link:hover {
+            transform: scale(1.08);
+            border-color: var(--accent);
+            box-shadow: 0 0 30px rgba(255, 0, 64, 0.4);
+        }
+        .cert-img {
+            height: 120px;
+            display: block;
+            border-radius: 6px;
+        }
 
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
+        /* Skill tags */
+        .skill-tag {
+            background: rgba(255, 0, 64, 0.12);
+            border-color: rgba(255, 0, 64, 0.3);
+            color: var(--accent);
+            display: inline-block;
+            border: 1px solid;
+            border-radius: 20px;
+            padding: 4px 16px;
+            margin: 4px 6px 4px 0;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .skill-tag:hover {
+            background: rgba(255, 0, 64, 0.25);
+            transform: translateY(-2px);
+        }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
+        /* ----- Projects ----- */
+        .blog-entry {
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .blog-entry:hover {
+            box-shadow: 0 0 30px rgba(255, 0, 64, 0.2);
+            transform: scale(1.02);
+        }
+        .blog-entry .heading a {
+            color: var(--text-light);
+        }
+        .blog-entry .heading a:hover {
+            color: var(--accent);
+        }
+        .zoom-effect {
+            overflow: hidden;
+            transition: transform 0.3s ease-out;
+            display: block;
+        }
+        .zoom-effect:hover {
+            transform: scale(1.1);
+        }
 
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
+        /* ----- Blog / Log Section ----- */
+        .blog-log-card {
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 0, 64, 0.1);
+            transition: 0.3s;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .blog-log-card:hover {
+            box-shadow: 0 0 50px rgba(255, 0, 64, 0.2);
+            transform: translateY(-5px);
+        }
+        .blog-log-card .icon {
+            font-size: 3.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        .blog-log-card h3 {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        .blog-log-card p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
 
+        /* ----- Counter ----- */
+        .block-18 .text {
+            color: var(--text-light);
+        }
+        .block-18 .text strong {
+            color: var(--accent);
+            text-shadow: 0 0 15px var(--accent);
+        }
 
-/* project image zoom effect */
+        /* ----- Footer ----- */
+        .ftco-footer {
+            background: var(--bg-dark) !important;
+            border-top: 2px solid var(--accent);
+        }
+        .ftco-footer p {
+            color: var(--text-muted);
+        }
 
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
+        /* ----- Contact ----- */
+        .contact-section .box {
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .contact-section .box:hover {
+            box-shadow: 0 0 30px rgba(255, 0, 64, 0.2);
+        }
+        .contact-section .icon {
+            color: var(--accent);
+        }
 
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
+        /* ----- Theme Toggle (Hacker Mode) ----- */
+        .theme-toggle {
+            background: var(--accent);
+            color: #0a0a0f;
+            box-shadow: 0 0 20px rgba(255, 0, 64, 0.5);
+            border: none;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: 0.3s;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .theme-toggle:hover {
+            box-shadow: 0 0 40px rgba(255, 0, 64, 0.8);
+            transform: scale(1.1);
+        }
 
+        /* ============================================================
+               INTERACTIVE HACKER EFFECTS
+               ============================================================ */
 
-</style>
+        /* Glitch text effect for name */
+        .glitch {
+            position: relative;
+            display: inline-block;
+            animation: glitch 3s infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 0 #ff0040, -2px 0 #00ffcc; }
+            25% { text-shadow: -2px 0 #ff0040, 2px 0 #00ffcc; }
+            50% { text-shadow: 2px 0 #ff0040, -2px 0 #00ffcc; }
+            75% { text-shadow: -2px 0 #ff0040, 2px 0 #00ffcc; }
+            100% { text-shadow: 2px 0 #ff0040, -2px 0 #00ffcc; }
+        }
 
+        /* Scanning line (only on hero) */
+        .scanline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            box-shadow: 0 0 20px var(--accent);
+            animation: scan 8s linear infinite;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
 
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
+        /* Particle Canvas (background) */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Scroll-triggered reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Click explosion particles */
+        .click-particle {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            background: var(--accent);
+            box-shadow: 0 0 10px var(--accent);
+            animation: explode 0.8s ease-out forwards;
+        }
+        @keyframes explode {
+            0% { opacity: 1; transform: scale(1) translate(0,0); }
+            100% { opacity: 0; transform: scale(0) translate(var(--tx), var(--ty)); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #typing-animation {
+                font-size: 20px;
+            }
+            .hero .text h1 {
+                font-size: 2.5rem;
+            }
+            .badge-item {
+                min-width: 140px;
+                padding: 12px 16px;
+            }
+            .blog-log-card {
+                padding: 30px 20px;
+            }
+            .theme-toggle {
+                width: 44px;
+                height: 44px;
+                font-size: 1.1rem;
+                bottom: 20px;
+                right: 20px;
+            }
+            .cert-img {
+                height: 80px;
+            }
+            .cert-img-link {
+                margin: 4px;
+            }
+        }
+
+        /* ===== DARK MODE (LIGHT THEME) ===== */
+        body.dark-mode {
+            background: #f0f0f5;
+            color: #1a1a2e;
+        }
+        body.dark-mode .ftco-section,
+        body.dark-mode .ftco-about,
+        body.dark-mode .ftco-counter,
+        body.dark-mode .ftco-hireme,
+        body.dark-mode .resume-wrap,
+        body.dark-mode .blog-entry,
+        body.dark-mode .box,
+        body.dark-mode .img-about .overlay,
+        body.dark-mode .blog-log-card,
+        body.dark-mode .badge-item {
+            background: #ffffff !important;
+            color: #1a1a2e !important;
+        }
+        body.dark-mode .resume-wrap,
+        body.dark-mode .blog-entry .text,
+        body.dark-mode .box {
+            background: #f8f8fc !important;
+            border-color: #cc0033 !important;
+        }
+        body.dark-mode .heading-section h2,
+        body.dark-mode .heading-section h1,
+        body.dark-mode .resume-wrap h2,
+        body.dark-mode .blog-entry h3,
+        body.dark-mode .about-info p,
+        body.dark-mode .counter-wrap .text,
+        body.dark-mode .blog-log-card h3,
+        body.dark-mode .badge-item .badge-name {
+            color: #1a1a2e !important;
+        }
+        body.dark-mode .navbar {
+            background: #ffffff !important;
+            border-bottom-color: #cc0033 !important;
+        }
+        body.dark-mode .ftco_navbar .navbar-brand {
+            color: #cc0033 !important;
+        }
+        body.dark-mode .ftco_navbar .nav-link {
+            color: #1a1a2e !important;
+        }
+        body.dark-mode .ftco_navbar .nav-link:hover {
+            color: #cc0033 !important;
+        }
+        body.dark-mode .skill-tag {
+            background: rgba(204, 0, 51, 0.12);
+            border-color: rgba(204, 0, 51, 0.3);
+            color: #cc0033;
+        }
+        body.dark-mode .exp-highlight {
+            background: rgba(204, 0, 51, 0.08);
+        }
+        body.dark-mode .ftco-footer {
+            background: #ffffff !important;
+            border-top-color: #cc0033;
+        }
+        body.dark-mode .ftco-footer p {
+            color: #1a1a2e !important;
+        }
+        body.dark-mode .hero .text h1 {
+            color: #1a1a2e;
+        }
+        body.dark-mode .hero .text h1 span {
+            color: #cc0033;
+            text-shadow: 0 0 20px #cc0033;
+        }
+        body.dark-mode .hero .subheading {
+            color: #cc0033;
+        }
+        body.dark-mode .glitch {
+            animation: glitch-light 3s infinite;
+        }
+        @keyframes glitch-light {
+            0% { text-shadow: 2px 0 #cc0033, -2px 0 #00ffcc; }
+            25% { text-shadow: -2px 0 #cc0033, 2px 0 #00ffcc; }
+            50% { text-shadow: 2px 0 #cc0033, -2px 0 #00ffcc; }
+            75% { text-shadow: -2px 0 #cc0033, 2px 0 #00ffcc; }
+            100% { text-shadow: 2px 0 #cc0033, -2px 0 #00ffcc; }
+        }
+        body.dark-mode .btn-primary {
+            background: #cc0033;
+            color: #fff !important;
+        }
+        body.dark-mode .btn-primary:hover {
+            background: #990026;
+        }
+        body.dark-mode .btn-outline-white {
+            border-color: #cc0033;
+            color: #cc0033 !important;
+        }
+        body.dark-mode .btn-outline-white:hover {
+            background: #cc0033;
+            color: #fff !important;
+        }
+        body.dark-mode .contact-section .icon {
+            color: #cc0033;
+        }
+        body.dark-mode .theme-toggle {
+            background: #cc0033;
+            color: #fff;
+        }
+        body.dark-mode .about-mf .title-s {
+            color: #cc0033;
+        }
+        body.dark-mode .about-mf .skill-mf .progress-bar {
+            background: #cc0033;
+        }
+        body.dark-mode .resume-wrap .date {
+            color: #cc0033;
+        }
+        body.dark-mode .blog-log-card .icon {
+            color: #cc0033;
+        }
+        body.dark-mode .blog-log-card p {
+            color: #1a1a2e;
+        }
+        body.dark-mode .cert-img-link:hover {
+            border-color: #cc0033;
+            box-shadow: 0 0 30px rgba(204, 0, 51, 0.3);
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <!-- ===== PARTICLE BACKGROUND ===== -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ===== NAVIGATION ===== -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Sushant Jadhav</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Sushant Jadhav</a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+                    <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+                    <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+                    <li class="nav-item"><a href="#badges-section" class="nav-link"><span>Badges &amp; Certs</span></a></li>
+                    <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+                    <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
+                    <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hi There!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Sushant Jadhav</span></h1>
+    <!-- ===== HERO / HOME ===== -->
+    <section id="home-section" class="hero">
+        <div class="home-slider owl-carousel">
+            <div class="slider-item">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
+                            <div class="text">
+                                <span class="subheading">// ROOT ACCESS GRANTED</span>
+                                <h1 class="mb-4 mt-3">I'm <span class="glitch">Sushant Jadhav</span></h1>
+                                <span id="typing-animation"></span>
+                                <script>
+                                    const typingEl = document.getElementById('typing-animation');
+                                    const texts = ['Penetration Tester', 'Red Teamer', 'CTF Player', 'Security Researcher'];
+                                    let idx = 0,
+                                        charIdx = 0,
+                                        isDeleting = false;
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Penetration Tester  ',
-						'CTF Player   ',
-						'Traveller   ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>Offensive Security Professional</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 2 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/daikoku10" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="https://github.com/Daikoku10" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
+                                    function typeLoop() {
+                                        const current = texts[idx];
+                                        if (isDeleting) {
+                                            typingEl.textContent = current.substring(0, charIdx - 1);
+                                            charIdx--;
+                                        } else {
+                                            typingEl.textContent = current.substring(0, charIdx + 1);
+                                            charIdx++;
+                                        }
+                                        if (!isDeleting && charIdx === current.length) {
+                                            isDeleting = true;
+                                            setTimeout(typeLoop, 1500);
+                                            return;
+                                        }
+                                        if (isDeleting && charIdx === 0) {
+                                            isDeleting = false;
+                                            idx = (idx + 1) % texts.length;
+                                            setTimeout(typeLoop, 400);
+                                            return;
+                                        }
+                                        setTimeout(typeLoop, isDeleting ? 60 : 120);
+                                    }
+                                    typeLoop();
+                                </script>
+                                <br><br>
+                                <h2 style="color:#ff0040; text-shadow:0 0 20px #ff0040;">Offensive Security Professional</h2>
+                                <p>
+                                    <a href="https://www.linkedin.com/in/daikoku10" class="btn btn-primary py-3 px-4">LinkedIn</a>
+                                    <a href="https://github.com/Daikoku10" class="btn btn-outline-white py-3 px-4">My Works</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scanline"></div>
     </section>
 
-
-
+    <!-- ===== ABOUT ===== -->
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Sushant Jadhav</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Offensive Security</span></p>
-										<p><span class="title-s">Experience: </span> <span>2+ Years</span></p>
-										<p><span class="title-s">Address: </span> <span>Navi Mumbai, India</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span></span>Web Application Security Testing<span class="pull-right">75%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Mobile Application Security Testing (Android) </span> <span class="pull-right">60%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Api Security Testing</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Network Security Testing</span> <span class="pull-right">75%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Red Teaming</span> <span class="pull-right">60%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">Who am I</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>With 2 years of hands-on experience in penetration testing and as a red team member, I specialize in offensive security and VAPT with ISO 27001.
-									 Accompanied by a bachelor's degree in computer engineering, I have successfully led security initiatives that enhance organizational resilience and demonstrated success in impactful projects and effective mentorship.
-									 A passionate traveler, foodie, and football player!</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Penetration Testing &amp; Red Teaming</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Healthcare, Banking and Finance, Retail &amp; Ecommerce</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Marathi</span></li>
-									<li class="d-flex"><span>Tools:</span> <span>Burp Suite, NMAP, Metasploit, Kali Linux &amp; Recon-ng</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Phishing , OSINT, Video Editing &amp; Report Writing</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, playing Football, Reading security Writeups</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="300">0</span> <span>+</span>
-									<span>&nbsp; Completed Pentest Applications</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/daikoku10/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="container">
+            <div class="row">
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-md-6 col-lg-5 d-flex">
+                        <div class="img-about img d-flex align-items-stretch">
+                            <div class="overlay">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="about-img">
+                                            <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="Sushant Jadhav">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-7">
+                                        <div class="about-info">
+                                            <p><span class="title-s">Name: </span><span>Sushant Jadhav</span></p>
+                                            <p><span class="title-s">Job Role: </span><span>Offensive Security</span></p>
+                                            <p><span class="title-s">Experience: </span><span>3+ Years</span></p>
+                                            <p><span class="title-s">Address: </span><span>Navi Mumbai, India</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-mf">
+                                    <p class="title-s">Skills</p>
+                                    <span>Web Application Security Testing</span>
+                                    <span class="pull-right">85%</span>
+                                    <div class="progress"><div class="progress-bar" role="progressbar" style="width:85%"></div></div>
+                                    <span>API Security Testing</span>
+                                    <span class="pull-right">80%</span>
+                                    <div class="progress"><div class="progress-bar" role="progressbar" style="width:80%"></div></div>
+                                    <span>Network & Thick Client Pentest</span>
+                                    <span class="pull-right">75%</span>
+                                    <div class="progress"><div class="progress-bar" role="progressbar" style="width:75%"></div></div>
+                                    <span>Mobile (Android) & Salesforce</span>
+                                    <span class="pull-right">70%</span>
+                                    <div class="progress"><div class="progress-bar" role="progressbar" style="width:70%"></div></div>
+                                    <span>DAST / SAST / SCA</span>
+                                    <span class="pull-right">80%</span>
+                                    <div class="progress"><div class="progress-bar" role="progressbar" style="width:80%"></div></div>
+                                    <span>Red Teaming & TPRA</span>
+                                    <span class="pull-right">65%</span>
+                                    <div class="progress"><div class="progress-bar" role="progressbar" style="width:65%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+                        <div class="row justify-content-start pb-3">
+                            <div class="col-md-12 heading-section ftco-animate">
+                                <h1 class="big">Who I Am</h1>
+                                <h2 class="mb-4">About Me</h2>
+                                <p style="color:#c8d0dc;">With <strong style="color:#ff0040;">3+ years</strong> of hands-on experience in penetration testing and red teaming,
+                                    I specialize in offensive security, VAPT, and ISO 27001 compliance. I hold a bachelor's degree
+                                    in computer engineering and have led security initiatives that enhance organizational resilience.
+                                    Passionate about uncovering hidden vulnerabilities, CTF challenges, and mentoring aspiring
+                                    security professionals.</p>
+                                <ul class="about-info mt-4 px-md-0 px-2">
+                                    <li class="d-flex"><span>Profile:</span><span>Penetration Testing &amp; Red Teaming</span></li>
+                                    <li class="d-flex"><span>Domain:</span><span>Healthcare, Banking, Retail, MSSP</span></li>
+                                    <li class="d-flex"><span>Languages:</span><span>English, Hindi, Marathi</span></li>
+                                    <li class="d-flex"><span>Core Tools:</span><span>Burp Suite, Tenable WAS, NMAP, Metasploit, Kali</span></li>
+                                    <li class="d-flex"><span>Other Skills:</span><span>OSINT, Phishing, Report Automation, Video Editing</span></li>
+                                    <li class="d-flex"><span>Interests:</span><span>Travel, Football, Security Writeups</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                            <div class="text">
+                                <p class="mb-4">
+                                    <span class="number" data-number="350">0</span>
+                                    <span>&nbsp; Applications Pentested</span>
+                                </p>
+                                <p><a href="https://www.linkedin.com/in/daikoku10/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-
-
-	
+    <!-- ===== RESUME / EXPERIENCE ===== -->
     <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Seasoned Security Analyst with 2+ years of experience enhancing cybersecurity strategies through data-driven insights. Proven expertise in penetration testing, vulnerability assessment and project coordination.</p>
-          </div>
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Resume</h1>
+                    <h2 class="mb-4">Resume</h2>
+                    <p style="color:#8899b0;">Seasoned Offensive Security Consultant with 3+ years of experience enhancing cybersecurity strategies through
+                        hands-on penetration testing, vulnerability assessment, and project coordination across global enterprises.</p>
+                </div>
+            </div>
+
+            <!-- ===== EXPERIENCE ===== -->
+            <div class="row">
+                <h1 class="big-4" style="color:#ff0040;">Experience</h1>
+                <div class="underline" style="border-bottom:2px solid #ff0040; width:100px;"></div>
+            </div>
+            <br>
+
+            <div class="row">
+
+                <!-- Deloitte USI -->
+                <div class="col-md-6 reveal">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">Deloitte USI</span>
+                        <h2>AppSecurity Team — Consultant II</h2>
+                        <span class="position" style="color:#8899b0;">July 2025 – Present</span>
+                        <p class="mt-4" style="color:#8899b0;">Deloitte USI is a premier professional services firm delivering audit, consulting, and cybersecurity solutions globally.</p>
+                        <ul>
+                            <li><strong>MSSP Healthcare Engagement:</strong> Delivered comprehensive security assessments across Web, API, Network, Thick Client, Android, and Salesforce for a global healthcare client via a Managed Security Service Provider (MSSP) model, collaborating as part of a global team.</li>
+                            <li><strong>DAST Program Ownership:</strong> Owned the migration of the Burp DAST tool to Azure — designed and configured VMs, scan agents, and server infrastructure, taking full ownership of the DAST program.</li>
+                            <li><strong>Tenable WAS Integration:</strong> Integrated Tenable WAS into the DAST program and built a custom vulnerability library to enhance detection accuracy and streamline security testing.</li>
+                            <li><strong>Report Automation:</strong> Developed an internal report automation application, reducing report turnaround time by 40% and improving operational efficiency.</li>
+                            <li><strong>TPRA & Third‑Party Risk Assessment:</strong> Executed TPRA checks including in‑depth binary file analysis, third‑party risk assessments, and comprehensive vendor security evaluations for the MSSP client, ensuring strict compliance with healthcare regulations.</li>
+                            <li><strong>SAST / SCA / DAST:</strong> Performed SAST, SCA, and DAST (Burp DAST, Tenable WAS) as part of the MSSP project, ensuring robust security coverage for the healthcare sector.</li>
+                        </ul>
+                        <div class="exp-highlight">
+                            <strong>Key Impact:</strong> Burp DAST migration reduced scan time by 35% • Vulnerability library improved detection accuracy by 25%
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TCS -->
+                <div class="col-md-6 reveal">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">TCS</span>
+                        <h2>Cybersecurity Analyst</h2>
+                        <span class="position" style="color:#8899b0;">2021 – 2023</span>
+                        <p class="mt-4" style="color:#8899b0;">Tata Consultancy Services — leading global IT services, consulting, and business solutions organization.</p>
+                        <ul>
+                            <li>Collaborated with UK and US-based top 5 Fortune 500 healthcare companies, achieving 100% Client Satisfaction Index (CSI) over two years.</li>
+                            <li>Pentested 300+ applications across healthcare, banking, and retail domains.</li>
+                            <li>Received multiple acknowledgments for red team contributions and served as Subject Matter Expert (SME), optimizing workflows for various clients.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Spin The Hack -->
+                <div class="col-md-6 reveal">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">Spin The Hack (STH)</span>
+                        <h2>Intern — Penetration Testing</h2>
+                        <span class="position" style="color:#8899b0;">2022 – 2023</span>
+                        <p class="mt-4" style="color:#8899b0;">Spin the Hack is a cybersecurity education startup delivering engaging content and specialized courses.</p>
+                        <ul>
+                            <li>Conducted penetration tests and Red Team engagements under mentor supervision, gaining real-world security assessment experience.</li>
+                            <li>Shadowed seasoned professionals and authored detailed case studies on advanced exploitation techniques.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PIE-INFOCOMM -->
+                <div class="col-md-6 reveal">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">PIE-INFOCOMM</span>
+                        <h2>Intern — Security Research</h2>
+                        <span class="position" style="color:#8899b0;">2020</span>
+                        <p class="mt-4" style="color:#8899b0;">Pi Infocomm is a specialized IT services company offering a wide range of technology solutions.</p>
+                        <ul>
+                            <li>Developed a heart stroke prediction model using machine learning (Python, Jupyter) for healthcare insights.</li>
+                            <li>Handled sensitive PII data with strict compliance to healthcare privacy regulations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Freelance / CTF -->
+                <div class="col-md-6 reveal">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">CTF, BBH &amp; Freelance</span>
+                        <h2>Independent Security Researcher</h2>
+                        <span class="position" style="color:#8899b0;">2024 – Present</span>
+                        <ul>
+                            <li>Top-ranked CTF player (team YCF, alias "Daikoku10"), qualified for Indian Army CTF L2.</li>
+                            <li>Bug bounty hunter on private programs (Bug Bounty Switzerland) and public platforms.</li>
+                            <li>Freelance penetration testing for a startup — assessed online assets and delivered actionable remediation reports.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <br><br>
+
+            <!-- ===== EDUCATION ===== -->
+            <div class="row">
+                <h1 class="big-4" style="color:#ff0040;">Education</h1>
+                <div class="underline" style="border-bottom:2px solid #ff0040; width:100px;"></div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6 reveal">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2017 – 2021</span>
+                        <h2>B.E. Computer Engineering</h2>
+                        <span class="position" style="color:#8899b0;">Terna Engineering College (Mumbai University)</span>
+                        <p class="mt-4" style="color:#8899b0;">CGPA: 7.83</p>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2016 – 2017</span>
+                        <h2>HSC (Maharashtra State Board)</h2>
+                        <span class="position" style="color:#8899b0;">St. Mary's Junior College</span>
+                        <p class="mt-4" style="color:#8899b0;">Grade: 74.46%</p>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2014 – 2015</span>
+                        <h2>SSC (Maharashtra State Board)</h2>
+                        <span class="position" style="color:#8899b0;">Nutan Marathi Vidyalaya</span>
+                        <p class="mt-4" style="color:#8899b0;">Grade: 90.60%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== DOWNLOAD CV ===== -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6 text-center ftco-animate">
+                    <p><a href="assets/docs/SUSHANT_JADHAV.pdf" target="_blank" class="btn btn-primary py-4 px-5">Download CV</a></p>
+                </div>
+            </div>
         </div>
-
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">CTF, BBH & Freelance</span>
-						<h2>Independent Security Researcher</h2>
-						<span class="position">2024-Present</span>
-						<p class="mt-4">CTF player with multiple wins, freelance penetration tester, and bug bounty hunter. 
-							<ul>
-								<li>Achieved top ranks in two global CTF competitions, played for the YCF team and under the name "Daikoku10", qualified for the Indian Army CTF L2, actively participating in CTF..</li>
-								<li>Engaged in bug hunting on private programs of Bug Bounty Switzerland and reported vulnerabilities on various public programs.</li>
-								<li>Conducted freelance penetration testing for a startup providing a centralized marketplace in India, assessing their online assets and documenting vulnerabilities with mitigation recommendations.</li>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">TCS</span>
-						<h2>Cybersecurity Analyst</h2>
-						<span class="position">2021-2023</span>
-						<p class="mt-4">Tata Consultancy Services (TCS) is a leading global IT services, consulting, and business solutions organization, part of the Tata Group. 
-							<ul>
-								<li>Collaborated with UK and US-based top 5 Fortune 500 healthcare companies, achieving a Client Satisfaction Index (CSI) of 100% over two years while successfully pentesting over 300 applications.</li>
-								<li>Received various acknowledgments for contributions and actively participated in red team engagements, enhancing the overall security posture of client applications.</li>
-								<li>Served as a Subject Matter Expert (SME), optimizing project workflows and best practices for various clients at TCS, ensuring efficient project delivery and high-quality outcomes.</li>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Spin The Hack (STH)</span>
-						<h2>Intern</h2>
-						<span class="position">2022-2023</span>
-						<p class="mt-4">Spin the Hack is a cybersecurity education startup providing engaging YouTube content and internships, along with specialized courses for aspiring professionals. 
-							<ul>
-								<li>Conducted penetration tests and Red Team engagements under mentor supervision, gaining practical experience in real-world security assessments and vulnerability exploitation.</li>
-								<li>Shadowed seasoned professionals on penetration testing projects while conducting research and writing detailed case studies, enhancing hands-on skills in offensive security and acquiring in-depth insights into advanced methodologies.</li>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">PIE-INFOCOMM</span>
-						<h2>Intern</h2>
-						<span class="position">2020</span>
-						<p class="mt-4">Pi Incofomm is a specialized IT services company since 2002, offering a wide range of tech services. 
-							<ul>
-								<li>Developed a heart stroke prediction model using machine learning techniques in Python and Jupyter Notebook, improving healthcare insights through patient data analysis.</li>
-								<li>Handled and processed sensitive healthcare data (PII), ensuring data privacy and security in compliance with healthcare regulations.</li>
-								</ul>
-						</p>
-					</div>
-
-				</div>
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2017-2021</span>
-    					<h2>Bachelor of Engineering <br> (Computer Engineering)</h2>
-    					<span class="position">Terna Engineering College <br> (Mumbai University)</span>
-    					<p class="mt-4">Grade: 7.83 CGPA</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2016-2017</span>
-    					<h2>Maharashtra State Board HSC</h2>
-    					<span class="position">St. Mary's Junior College</span>
-    					<p class="mt-4">Grade: 74.46%</p>
-    				</div>
-				</div>
-    		</div>
-			<div class="col-md-6">
-				<div class="resume-wrap ftco-animate">
-					<span class="date">2014-2015</span>
-					<h2>Maharashtra State Board SSC</h2>
-					<span class="position">Nutan Marathi Vidyalaya</span>
-					<p class="mt-4">Grade: 90.60%</p>
-				</div>
-			</div>
-		</div>
-			     
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="assets/docs/SUSHANT_JADHAV.pdf" target="_blank" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
     </section>
 
-   
+    <!-- ===== BADGES & CERTIFICATIONS ===== -->
+    <section class="ftco-section ftco-no-pb" id="badges-section">
+        <div class="container">
+            <div class="row justify-content-center pb-4">
+                <div class="col-md-8 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Badges &amp; Certs</h1>
+                    <h2 class="mb-4">Badges &amp; Certifications</h2>
+                    <p style="color:#8899b0;">Third‑party verified credentials and self‑designated certifications in offensive security, AI fluency, and more.</p>
+                </div>
+            </div>
 
+            <!-- Badges -->
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <h3 style="color:#ff0040; text-align:center; margin-bottom:20px;">🏅 Badges</h3>
+                    <div class="badge-grid">
+                        <div class="badge-item reveal">
+                            <span class="badge-icon">🤖</span>
+                            <div class="badge-name">Anthropic Claude &amp; AI Fluency</div>
+                            <div class="badge-issuer">Anthropic</div>
+                            <div class="badge-level">Framework &amp; Foundations</div>
+                        </div>
+                        <div class="badge-item reveal">
+                            <span class="badge-icon">🏆</span>
+                            <div class="badge-name">Impact Day 2025</div>
+                            <div class="badge-issuer">Deloitte</div>
+                            <div class="badge-level">Participation</div>
+                        </div>
+                        <div class="badge-item reveal">
+                            <span class="badge-icon">🧠</span>
+                            <div class="badge-name">Anthropic Claude 101</div>
+                            <div class="badge-issuer">Anthropic</div>
+                            <div class="badge-level">Foundational</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Certifications - Clickable Badge Images -->
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <h3 style="color:#ff0040; text-align:center; margin-bottom:20px;">📜 Certifications</h3>
+                    <div class="text-center ftco-animate">
+
+                        <!-- eWPTX -->
+                        <a href="#" class="cert-img-link" target="_blank" title="Click to verify eWPTX">
+                            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/189717327"
+                                 alt="eWPTX - eLearnSecurity Web Application Penetration Tester eXtreme"
+                                 class="cert-img" />
+                        </a>
+
+                        <!-- eWPT -->
+                        <a href="#" class="cert-img-link" target="_blank" title="Click to verify eWPT">
+                            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/188055645"
+                                 alt="eWPT - eLearnSecurity Web Application Penetration Tester"
+                                 class="cert-img" />
+                        </a>
+
+                        <!-- eJPTv2 -->
+                        <a href="#" class="cert-img-link" target="_blank" title="Click to verify eJPTv2">
+                            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/81522350"
+                                 alt="eJPTv2 - eLearnSecurity Junior Penetration Tester"
+                                 class="cert-img" />
+                        </a>
+
+                        <!-- ICSI-CNSS -->
+                        <a href="#" class="cert-img-link" target="_blank" title="Click to verify ICSI-CNSS">
+                            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/28157155"
+                                 alt="ICSI-CNSS - Certified Network Security Specialist"
+                                 class="cert-img" />
+                        </a>
+
+                        <!-- CAP -->
+                        <a href="#" class="cert-img-link" target="_blank" title="Click to verify CAP">
+                            <img src="https://pentestingexams.com/wp-content/uploads/2021/11/cert-stamp-cap.webp"
+                                 alt="CAP - Certified AppSec Practitioner"
+                                 class="cert-img" />
+                        </a>
+
+                        <!-- CRTA -->
+                        <a href="#" class="cert-img-link" target="_blank" title="Click to verify CRTA">
+                            <img src="https://github.com/user-attachments/assets/c6962c22-db9b-4883-a68d-6665ba436cd7"
+                                 alt="CRTA - Certified Red Team Analyst"
+                                 class="cert-img" />
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center ftco-animate">
+                    <p style="color:#666; font-size:0.75rem; margin-top:5px;">
+                        ⚡ Click any badge to verify
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
     <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">My Work</h1>
-            <h2 class="mb-4">My Work</h2>
-            <p>Below are my work Highlights: Showcasing key achievements, Projects & Endorsement.</p>
-          </div>
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">My Work</h1>
+                    <h2 class="mb-4">My Work</h2>
+                    <p style="color:#8899b0;">Showcasing key achievements, projects &amp; endorsements.</p>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4 d-flex ftco-animate reveal">
+                    <div class="blog-entry justify-content-end">
+                        <a href="https://github.com/Daikoku10/Student-Micro-Loan-mgt/blob/main/snapshots/01.PNG" class="block-20 zoom-effect" style="background-image:url('images/proj_1.jpg');"></a>
+                        <div class="text mt-3 float-right d-block">
+                            <h3 class="heading"><a href="https://github.com/Daikoku10/Student-Micro-Loan-mgt/blob/main/DEMO_VIDEO_APPLICATION">Student Micro-Loan Management</a></h3>
+                            <p style="color:#8899b0;">Streamlined loan discovery platform connecting students with verified lenders.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate reveal">
+                    <div class="blog-entry justify-content-end">
+                        <a href="https://github.com/Daikoku10/Heart_stroke_prediction_internship" class="block-20 zoom-effect" style="background-image:url('images/proj_2.jpg');"></a>
+                        <div class="text mt-3 float-right d-block">
+                            <h3 class="heading"><a href="https://github.com/Daikoku10/Heart_stroke_prediction_internship">Heart Stroke Prediction Model</a></h3>
+                            <p style="color:#8899b0;">ML-based predictive model for early stroke detection using patient health data.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate reveal">
+                    <div class="blog-entry justify-content-end">
+                        <a href="https://github.com/Daikoku10/Key_logger" class="block-20 zoom-effect" style="background-image:url('images/proj_3.jpg');"></a>
+                        <div class="text mt-3 float-right d-block">
+                            <h3 class="heading"><a href="https://github.com/Daikoku10/Key_logger">Key Stroke Logger with SMTP</a></h3>
+                            <p style="color:#8899b0;">Keystroke logging tool with automated email delivery for security research.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Daikoku10/Student-Micro-Loan-mgt/blob/main/snapshots/01.PNG" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Daikoku10/Student-Micro-Loan-mgt/blob/main/DEMO_VIDEO_APPLICATION">Student Micro-Loan Management</a></h3>
-                <p>The Student Micro Loan Management system simplifies access to verified information on various student loan options, streamlining the process for both students and lenders.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Daikoku10/Heart_stroke_prediction_internship" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Daikoku10/Heart_stroke_prediction_internship">Heart Stroke Prediction Model</a></h3>
-                <p>The project focuses on using machine learning techniques to predict the heart stroke by analyzing patient data, aiming for high accuracy & system efficiency.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/Daikoku10/Key_logger" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Daikoku10/Key_logger ">Key Stroke Logger with SMTP Email Delivery</a></h3>
-                <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-	
     </section>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Achievements</span>
-              </div>
+    <!-- ===== BLOG / LOG SECTION ===== -->
+    <section class="ftco-section" id="blog-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Blog</h1>
+                    <h2 class="mb-4">My Security Log</h2>
+                    <p style="color:#8899b0;">Writeups, research, and thoughts on offensive security, CTF challenges, and industry trends.</p>
+                </div>
             </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="300">0</strong>
-                <span>Pentested Applications</span>
-              </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="blog-log-card reveal">
+                        <div class="icon">📝</div>
+                        <h3>Read My Latest Articles</h3>
+                        <p>I share my experiences, methodologies, and insights from the field of offensive security. Stay tuned for deep dives into vulnerabilities, red team tactics, and tooling.</p>
+                        <a href="https://medium.com/@yourhandle" target="_blank" class="btn btn-primary py-3 px-5" id="blogLink">
+                            Visit My Blog
+                        </a>
+                        <p style="margin-top:15px; font-size:0.8rem; color:#8899b0;">
+                            <span class="skill-tag">Medium</span>
+                            <span class="skill-tag">Writeups</span>
+                            <span class="skill-tag">CTF</span>
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Bugs Reported (documented)</span>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>Check Out My<span> Github </span> </h2>
-						<div class="heading"> <h4> I thrive on unraveling complex security challenges &amp; uncovering hidden vulnerabilities in systems. </h4>
-						<br>
-						<p><a href="https://github.com/Daikoku10" target="_blank" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+    </section>
 
+    <!-- ===== STATS COUNTER ===== -->
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+        <div class="container">
+            <div class="row d-md-flex align-items-center">
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="12">0</strong>
+                            <span>Achievements</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="350">0</strong>
+                            <span>Pentested Apps</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="25">0</strong>
+                            <span>Bugs Reported</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="8">0</strong>
+                            <span>Certifications &amp; Badges</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- ===== GITHUB CTA ===== -->
+        <div class="ftco-section ftco-hireme img margin-top" style="background-image:url(images/bg_1.jpg)">
+            <div class="row justify-content-center">
+                <div class="col-md-7 ftco-animate text-center">
+                    <h2 style="color:#e8edf5;">Check Out My <span style="color:#ff0040;">GitHub</span></h2>
+                    <div class="heading">
+                        <h4 style="color:#8899b0;">I thrive on unraveling complex security challenges &amp; uncovering hidden vulnerabilities.</h4>
+                        <br>
+                        <p><a href="https://github.com/Daikoku10" target="_blank" class="btn btn-primary py-3 px-5">GitHub</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ===== CONTACT ===== -->
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact Me</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Contact</h1>
+                    <h2 class="mb-4">Contact Me</h2>
+                    <p style="color:#8899b0;">Reach out for collaborations, pentest inquiries, or just to say hello!</p>
+                </div>
+            </div>
+            <div class="row d-flex contact-info mb-5">
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate reveal">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="icon-map-signs"></span></div>
+                        <h3 class="mb-4" style="color:#e8edf5;">Address</h3>
+                        <p style="color:#8899b0;">Navi Mumbai, India</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate reveal">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="icon-phone2"></span></div>
+                        <h3 class="mb-4" style="color:#e8edf5;">Email</h3>
+                        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=sushantjj7@gmail.com" target="_blank" style="color:#ff0040;">Connect Here</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate reveal">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="icon-paper-plane"></span></div>
+                        <h3 class="mb-4" style="color:#e8edf5;">Telegram</h3>
+                        <p><a href="https://t.me/daikoku10" target="_blank" style="color:#ff0040;">@daikoku10</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate reveal">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="icon-globe"></span></div>
+                        <h3 class="mb-4" style="color:#e8edf5;">Resume</h3>
+                        <p><a href="assets/docs/SUSHANT_JADHAV.pdf" target="_blank" style="color:#ff0040;">Download Here</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-md-7 ftco-animate text-center">
+                        <h3 style="color:#e8edf5;">Want to pentest your <span style="color:#ff0040;">assets?</span>
+                            <a href="https://forms.gle/sYUPRRVdrbYuzmRp7" target="_blank" class="btn btn-primary py-3 px-5">Click Here</a>
+                        </h3>
+                    </div>
+                </div>
+                <br>
+                <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+                    <li class="ftco-animate normal-txt" style="color:#8899b0;">Find me on</li>
+                    <li class="ftco-animate"><a href="https://www.youtube.com/@vjfoodhut1854" target="_blank" style="color:#ff0040;"><span class="icon-youtube"></span></a></li>
+                    <li class="ftco-animate"><a href="https://www.linkedin.com/in/daikoku10/" target="_blank" style="color:#ff0040;"><span class="icon-linkedin"></span></a></li>
+                    <li class="ftco-animate"><a href="https://www.instagram.com/sush7_/" target="_blank" style="color:#ff0040;"><span class="icon-instagram"></span></a></li>
+                </ul>
+                <br>
+            </div>
         </div>
+    </section>
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Navi Mumbai, India</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Email</h3>
-	            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=sushantjj7@gmail.com" target="_blank">Connect Here</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Telegram</h3>
-	            <p><a href="https://t.me/daikoku10" target="_blank">Here</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="assets/docs/SUSHANT_JADHAV.pdf" target="_blank">Here</a></p>
-	          </div>
-          </div>
-
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h3>Want to Pentest your<span> Assets?  </span> <a href="https://forms.gle/sYUPRRVdrbYuzmRp7" target="_blank" class="btn btn-primary py-3 px-5">Click Here</a> </h3>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.youtube.com/@vjfoodhut1854" target="_blank"><span class="icon-youtube"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/daikoku10/" target="_blank"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://www.instagram.com/sush7_/" target="_blank"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>	
- </section>
-
-
- 
-	
+    <!-- ===== FOOTER ===== -->
     <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Pegasus can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by Pegasus</a>
-	<!-- Link back to Pegasus can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p style="color:#8899b0;">
+                        Copyright &copy; <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true" style="color:#ff0040;"></i> by Pegasus
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <!-- ===== HACKER MODE TOGGLE ===== -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle hacker mode">
+        💀
+    </button>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
 
+    <!-- ===== PARTICLE BACKGROUND ===== -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('particles-canvas');
+            const ctx = canvas.getContext('2d');
+            let w, h, particles = [];
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+            function resize() {
+                w = canvas.width = window.innerWidth;
+                h = canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * w;
+                    this.y = Math.random() * h;
+                    this.vx = (Math.random() - 0.5) * 0.8;
+                    this.vy = (Math.random() - 0.5) * 0.8;
+                    this.radius = Math.random() * 2.5 + 0.5;
+                    this.color = `rgba(255,0,64,${Math.random() * 0.5 + 0.2})`;
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0 || this.x > w) this.vx *= -1;
+                    if (this.y < 0 || this.y > h) this.vy *= -1;
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
+            }
+
+            function initParticles(count) {
+                particles = [];
+                for (let i = 0; i < count; i++) {
+                    particles.push(new Particle());
+                }
+            }
+            initParticles(180);
+
+            function drawLines() {
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 130) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = `rgba(255,0,64,${0.15 * (1 - dist / 130)})`;
+                            ctx.lineWidth = 0.6;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, w, h);
+                particles.forEach(p => { p.update();
+                    p.draw(); });
+                drawLines();
+                requestAnimationFrame(animate);
+            }
+            animate();
+
+            window.addEventListener('resize', () => {
+                resize();
+                initParticles(180);
+            });
+        })();
+    </script>
+
+    <!-- ===== SCROLL REVEAL & CLICK EXPLOSION ===== -->
+    <script>
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        reveals.forEach(el => observer.observe(el));
+
+        // Click explosion effect on all buttons
+        document.querySelectorAll('.btn, a[href]').forEach(el => {
+            el.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const cx = rect.left + rect.width / 2;
+                const cy = rect.top + rect.height / 2;
+                for (let i = 0; i < 30; i++) {
+                    const p = document.createElement('div');
+                    p.classList.add('click-particle');
+                    const angle = Math.random() * 2 * Math.PI;
+                    const dist = 80 + Math.random() * 120;
+                    const tx = Math.cos(angle) * dist;
+                    const ty = Math.sin(angle) * dist;
+                    p.style.setProperty('--tx', tx + 'px');
+                    p.style.setProperty('--ty', ty + 'px');
+                    p.style.left = cx + 'px';
+                    p.style.top = cy + 'px';
+                    p.style.width = (4 + Math.random() * 8) + 'px';
+                    p.style.height = p.style.width;
+                    p.style.background = `hsl(${340 + Math.random() * 30}, 100%, 50%)`;
+                    p.style.boxShadow = '0 0 15px #ff0040';
+                    document.body.appendChild(p);
+                    setTimeout(() => p.remove(), 1000);
+                }
+            });
+        });
+    </script>
+
+    <!-- ===== THEME TOGGLE ===== -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('themeToggle');
+            const body = document.body;
+
+            const current = localStorage.getItem('theme') || 'light';
+            if (current === 'dark') {
+                body.classList.add('dark-mode');
+                toggle.innerHTML = '☀️';
+            }
+
+            toggle.addEventListener('click', function() {
+                body.classList.toggle('dark-mode');
+                const isDark = body.classList.contains('dark-mode');
+                toggle.innerHTML = isDark ? '☀️' : '💀';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+        })();
+    </script>
+
+    <!-- ===== UPDATE BLOG LINK ===== -->
+    <script>
+        document.getElementById('blogLink').href = 'https://medium.com/@yourhandle';
+    </script>
+
+</body>
 </html>
